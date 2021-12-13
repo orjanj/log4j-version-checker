@@ -9,7 +9,6 @@ else
     search_dir=$1
 fi
 
-
 # check if tmp dir exits - if not, create it
 if [ ! -d "${tmp_dir}" ]; then
     if mkdir -p /tmp/log4j; then
@@ -18,8 +17,6 @@ if [ ! -d "${tmp_dir}" ]; then
         echo "Error: Unable to create directory ${tmp_dir}."
         exit 1
     fi
-else
-    echo "Temporary directory ${tmp_dir} exists."
 fi
 
 # crawl through each matching jar file and check version
